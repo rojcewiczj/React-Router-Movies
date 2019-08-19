@@ -19,7 +19,6 @@ const App = () => {
     <div>
       <Router>
       <SavedList list={savedList} />
-      <link to={`/movies/${Movie.id}`} />
       <Route path ="/" render={props =><MovieList {...props} movies={MovieList}/>} />
        <Route path ="/movies/:id" render={props=><Movie movie={Movie} />} />
       </Router>
