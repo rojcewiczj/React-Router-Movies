@@ -20,7 +20,7 @@ const App = () => {
       <Router>
       <SavedList list={savedList} />
       <Route path ="/" render={props =><MovieList {...props} movies={MovieList}/>} />
-       <Route path ="/movies/:id" render={props=><Movie movie={Movie} />} />
+       
       </Router>
     </div>
   );
