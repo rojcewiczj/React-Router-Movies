@@ -4,8 +4,8 @@ import SavedList from './Movies/SavedList';
 import ReactDOM from "react-dom";
 import MovieList from "./Movies/MovieList";
 import MovieCard from "./Movies/MovieCard";
-
-import { Route } from "react-router-dom";
+import Movie from "./Movies/Movie";
+import { Route , Link } from "react-router-dom";
 import {BrowserRouter as Router} from "react-router-dom";
 const App = () => {
   const [savedList, setSavedList] = useState( [] );
@@ -19,8 +19,9 @@ const App = () => {
     <div>
       <Router>
       <SavedList list={savedList} />
+      <link to={`/movies/${Movie.id}`} />
       <Route path ="/" render={props =><MovieList {...props} movies={MovieList}/>} />
-       <Route path
+       <Route path ="/movies/:id" render={props=><Movie movie={Movie} />} />
       </Router>
     </div>
   );
