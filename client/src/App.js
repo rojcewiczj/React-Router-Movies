@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import SavedList from './Movies/SavedList';
 import ReactDOM from "react-dom";
 import MovieList from "./Movies/MovieList";
-import Movie from "./Movies/Movie";
+import MovieCard from "./Movies/MovieCard";
 
 import { Route } from "react-router-dom";
 import {BrowserRouter as Router} from "react-router-dom";
@@ -20,7 +20,7 @@ const App = () => {
       <Router>
       <SavedList list={savedList} />
       <Route path ="/" render={props =><MovieList {...props} movies={MovieList}/>} />
-      <Route path="/Movies/:id" render={Movie} />
+       <Route path
       </Router>
     </div>
   );
