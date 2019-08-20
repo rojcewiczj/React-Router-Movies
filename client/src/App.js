@@ -22,12 +22,11 @@ const App = () => {
       <SavedList list={savedList} />
       <Route exact path ="/" render={props =><MovieList {...props} movies={MovieList}  />} />
        <Route path="/Movies/:id"  render={props=> <Movie {...props} movie={Movie} /> }/>
-      
       </Router>
+      
     </div>
   );
 };
 
 export default App;
-const rootElment = document.getElementById('root');
-ReactDOM.render (<Router><App /></Router>, rootElment);
+

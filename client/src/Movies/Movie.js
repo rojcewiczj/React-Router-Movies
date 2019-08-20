@@ -45,11 +45,11 @@ const [movie, setMovie] = useState();
         </div>
         <h3>Actors</h3>
 
-      { /*{stars.map(star => (
+      {stars.map(star => (
           <div key={star} className="movie-star">
             {star}
           </div>
-        ))}*/} 
+        ))}
       </div> 
       <div className="save-button">Save</div>
     </div>
