@@ -29,16 +29,14 @@ const MovieList = props => {
     </div>
   );
 }
-function routeToMovie() {
-  props.history.push(`/Movies/${movie.id}`)
-};
+
 
 function MovieDetails({ movie }) {
   const { title, director, metascore, stars } = movie;
   return (
-      
+      <Link to={`/Movies/${movie.id}`}> 
     <div className="movie-card"> 
-   <button onClick={()=> routeToMovie()}>
+  
       <h2>{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
@@ -48,15 +46,15 @@ function MovieDetails({ movie }) {
       </div>
       <h3>Actors</h3>
 
-      {/*{stars.map(star => (
+     { /* {stars.map(star => (
         <div key={star} className="movie-star">
           {star}
-      </div>*/ }
+        </div> 
         
-      ))}
-     </button>
+     ))} */} 
+     
     </div>
-    
+    </Link>
   );
 }
 
